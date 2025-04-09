@@ -112,7 +112,7 @@ $secondaryfontsize:15px;
 .fancy {
 
     background: white;
-    clip-path: path("M 0 100 L 0 75 A 5 5 0 0 1 470 7 L 200 200 z");
+    clip-path: path("M 0 100 L 0 75 A 5 5 0 0 1 470  L 200 200 z");
     border: 2px solid #fff;
     min-width: 430px;
     border-radius: 0;
@@ -214,10 +214,17 @@ $secondaryfontsize:15px;
 
    .fancy:hover .text {
     color: white;
-
     padding-left: 1.5em;
+    display: none;
    }
-
+   .fancy:hover .afterhover{
+    color: white;
+    padding-left: 1.5em;
+    display: block;
+   }
+   .fancy .afterhover{
+    display: none;
+   }
    .fancy:hover .top-key {
     left: -2px;
     width: 0px;
@@ -264,6 +271,7 @@ $secondaryfontsize:15px;
     align-items: center;
   }
   
+
 
 
   

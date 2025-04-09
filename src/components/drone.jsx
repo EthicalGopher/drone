@@ -1,8 +1,7 @@
 import React from "react";
 import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
 import Droneani from "../assets/drone.riv";
-import "../assets/styles/hero.scss";
-
+import "../assets/styles/hero.scss"
 const RiveWrapper = () => {
   const { RiveComponent } = useRive({
     src: Droneani,
@@ -55,20 +54,26 @@ export default function Drone() {
           <div className=" hidden lg:flex  flex-col md:gap-12 px-3">
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">Audio Announcements and Warnings</span>
+              <span className="text beforehover">Live Surveillance and Monitoring</span>
+              <span className="text afterhover">Mini drone cam detects humans/animals.</span>
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">Real Time Alert System</span>
+              <span className="text">Data Logging</span>
+              <span className="text afterhover">Dual backup: SD card + cloud storage.</span>
+
+
+              
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">Laser scanner / LIDAR / LADAR</span>
-              <span className="bottom-key-1"></span>
+              <span className="text">Live Human and Animal Detection
+              System</span>
+              <span className="text afterhover">Real-time human/animal classification.</span>              <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
           </div>
@@ -78,19 +83,27 @@ export default function Drone() {
           <div className= "hidden lg:flex  flex-col md:gap-12 px-3">
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">Geofencing and Obstacle Avoidance</span>
+              <span className="text">Autonomous Flight with manual
+              control</span>
+              <span className="text afterhover">Automated or supervisor-controlled flights.</span>              <span className="bottom-key-1"></span>
+
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">Thermo-graphic/ IR cameras</span>
+              <span className="text">Payload Delivery</span>
+              <span className="text afterhover">Emergency payload drop capability.</span>              <span className="bottom-key-1"></span>
+
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
             <li className="fancy">
               <span className="top-key"></span>
-              <span className="text">RGB & Multi-Spectral Sensor</span>
+              <span className="text">Leaf Disease Detection System</span>
+              <span className="text afterhover">Automated plant disease detection.</span>              <span className="bottom-key-1"></span>
+
+
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>

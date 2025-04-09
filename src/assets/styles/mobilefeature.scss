@@ -3,4 +3,23 @@
     height: auto;
     width: 100vw;
     position: relative;
+
+    
 } 
+#mobilefeature .box{
+    .afterhover{
+        display: none;
+    }
+    .text{
+        display: block;
+    }
+    &:hover {
+
+    .text{
+        display: none;
+    }
+     .afterhover{
+        display: block;
+    }
+}
+}

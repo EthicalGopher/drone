@@ -1,12 +1,12 @@
 import React from "react";
-
+import "../assets/styles/mobilefeature.scss"
 const features = [
-  "Audio Announcements and Warnings",
-  "Geofencing and Obstacle Avoidance",
-  "Real Time Alert System",
-  "Thermo-graphic/ IR cameras",
-  "Laser scanner / LIDAR / LADAR",
-  "RGB & Multi-Spectral Sensor",
+  { text: "Live Surveillance and Monitoring", afterhover: "Mini drone cam detects humans/animals." },
+  { text: "Data Logging", afterhover: "Dual backup: SD card + cloud storage." },
+  { text: "Live Human and Animal Detection System", afterhover: "Real-time human/animal classification." },
+  { text: "Autonomous Flight with manual contro", afterhover: "Automated or supervisor-controlled flights." },
+  { text: "Payload Delivery", afterhover: "Emergency payload drop capability" },
+  { text: "Leaf Disease Detection System", afterhover: "Automated plant disease detection." },
 ];
 
 export default function Mobilefeature() {
@@ -26,11 +26,14 @@ export default function Mobilefeature() {
                          hover:bg-[#a31d56] transition-all duration-300 ease-out
                          transform hover:scale-[1.02] border-2 border-transparent
                          hover:border-white/20 focus:outline-none focus:ring-2
-                         focus:ring-white/50 cursor-pointer"
+                         focus:ring-white/50 cursor-pointer box"
             >
-              <span className="drop-shadow-md">{feature}</span>
+              <span className="drop-shadow-md text">{feature.text}</span>
+              <span className="drop-shadow-md afterhover">{feature.afterhover}</span>
+
             </div>
           ))}
+          
         </div>
       </section>
     </React.Fragment>
