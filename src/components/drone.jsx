@@ -41,7 +41,7 @@ export default function Drone() {
         }}
       >
 
-<div className="absolute bottom-10  w-full z-5 flex items-center justify-center lg:hidden">
+<div className="absolute bottom-20  w-full z-5 flex items-center justify-center lg:hidden">
 
 <Scrolldown/>
 </div>
