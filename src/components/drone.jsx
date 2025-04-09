@@ -39,7 +39,7 @@ export default function Drone() {
           maxWidth: "100vw",
         }}
       >
-
+<div className="w-full h-54  absolute z-5"></div>
 <div className="absolute bottom-20  w-full z-5 flex items-center justify-center lg:hidden">
 
 <Scrolldown/>
@@ -119,7 +119,7 @@ export default function Drone() {
           }}
         >
           
-          <p id="heading" className="2xl:text-[10vw] text-7xl md:text-9xl">
+          <p id="heading" className="2xl:text-[10vw] text-7xl md:text-8xl">
             Jatayu
           </p>
           <p id="subheading" className="2xl:w-[40%] xl:w-[50%]  lg:w-[30vw]  w-[90vw]">
