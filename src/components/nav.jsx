@@ -56,7 +56,7 @@ export default function Nav() {
         <div className="hidden md:flex space-x-4 gap-5 ">
         <div className="nav">
   <div className="container">
-    <div className="btn">Home</div>
+    <a className="btn" href='#hero_section'>Home</a>
     <div className="btn">Contact</div>
     <div className="btn">About</div>
     <div className="btn">FAQ</div>

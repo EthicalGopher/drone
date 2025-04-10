@@ -14,7 +14,7 @@ export default function Mobilefeature() {
     <React.Fragment>
       <section
         id="mobilefeature"
-        className="lg:hidden block p-5 sm:p-8 bg-gradient-to-br from-[#DB4C00] to-[#a31d56]"
+        className="lg:hidden block p-5 sm:p-8"
       >
         <div className="grid grid-cols-2 gap-4 sm:gap-5">
           {features.map((feature, index) => (

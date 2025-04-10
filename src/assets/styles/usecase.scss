@@ -1,0 +1,248 @@
+$mainbackground:#001220;
+$primarycolor : white;
+$secondarycolor : #E8E9EC;
+$tertiarycolor:#B8BDC9;
+$secondaryfontsize:15px;
+
+.feature-section {
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: opacity 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &.section-visible {
+      opacity: 1;
+    }
+  }
+  
+  .feature-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(219, 76, 0, 0.5), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.7s ease;
+    }
+    
+    &.feature-visible {
+      opacity: 1;
+      transform: translateY(0);
+      
+      &::before {
+        transform: translateX(0);
+      }
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.2);
+      
+   
+    }
+}
+  
+  /* Creating the wave gradient at the bottom */
+  .wave-gradient {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -70px;
+      height: 150px;
+      background: linear-gradient(to bottom, transparent, rgba(219, 76, 0, 0.2) 40%, rgba(163, 29, 86, 0.2) 70%, transparent);
+      border-radius: 50% 50% 0 0;
+      transform: scaleX(1.5);
+      animation: waveMove 15s ease-in-out infinite alternate;
+    }
+  }
+  
+  @keyframes waveMove {
+    0% {
+      transform: scaleX(1.5) translateX(-5%);
+    }
+    100% {
+      transform: scaleX(1.5) translateX(5%);
+    }
+  }
+  
+  /* Additional card staggered entrance animation */
+  @for $i from 0 through 5 {
+    .feature-card:nth-child(#{$i + 1}) {
+      transition-delay: #{$i * 0.1}s;
+    }
+  }
+
+  .divider2{
+    background: url(../background/page3.svg);
+    background-size: cover;
+
+
+}
+#usecase .box {
+  
+    .afterhover {
+      max-height: 0;
+      transition: all 0.3s ease;
+      transform: translateY(10px);
+    }
+    
+    &:hover, &:active {
+      .afterhover {
+        max-height: 200px;
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+  }
+#usecase{
+
+
+    
+    .fancy {
+        
+        background: white;
+        
+        border: 2px solid #fff;
+        min-width: 430px;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: $secondarycolor;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 1.25em 2em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        font-size: 13px;
+        
+        @media (max-width:1280px) {
+            min-width: auto;
+            
+        }
+        @media (max-width:1440px) {
+            min-width: auto;
+            
+        }
+    }
+    
+    .fancy::before {
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: red;
+        top: 25px;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: background 0.3s linear, width 0.3s linear;
+    }
+    
+    .fancy .text {
+        font-size: 1.125em;
+        line-height: 1.33333em;
+        padding-left: 2em;
+        display: block;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: transparent !important;
+        color: rgb(7, 6, 6);
+    }
+    
+    .fancy .top-key {
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: black;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+    
+    .fancy .bottom-key-1 {
+        height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: black;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: black;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    clip-path: none;
+    background: transparent;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+    
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+}
