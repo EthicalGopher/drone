@@ -4,6 +4,7 @@ import Usecase from "./components/usecase"
 import './App.css'
 import Mobilefeature from "./components/mobilefeatures"
 import Pricing from "./components/pricing"
+import Maintainance from "./components/maintainance"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
      <Mobilefeature/>
      <Usecase/>
      <Pricing/>
+     <Maintainance/>
     </>
   )
 }

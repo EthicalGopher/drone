@@ -57,9 +57,9 @@ export default function Nav() {
         <div className="nav">
   <div className="container">
     <a className="btn" href='#hero_section'>Home</a>
-    <div className="btn">Contact</div>
     <div className="btn">About</div>
-    <div className="btn">FAQ</div>
+    <a className="btn" href='#pricing'>Pricing</a>
+    <a className="btn" href='#maintainance'>Services</a>
     <svg
       className="outline"
       overflow="visible"
@@ -97,11 +97,11 @@ export default function Nav() {
             <a href="#about" className="text-white hover:text-gray-300" onClick={toggleMenu}>
               About
             </a>
-            <a href="#services" className="text-white hover:text-gray-300" onClick={toggleMenu}>
-              Services
+            <a href="#pricing" className="text-white hover:text-gray-300" onClick={toggleMenu}>
+              Princing
             </a>
-            <a href="#contact" className="text-white hover:text-gray-300" onClick={toggleMenu}>
-              Contact
+            <a href="#maintainance" className="text-white hover:text-gray-300" onClick={toggleMenu}>
+              Services
             </a>
           </div>
         </div>

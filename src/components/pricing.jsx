@@ -44,7 +44,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="min-h-screen mainbackground py-24 px-4 sm:px-6 text-white relative overflow-hidden">
+    <section id="pricing" className=" mainbackground py-24 px-4 sm:px-6 text-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 -left-20 w-64 h-64 rounded-full bg-[#DB4C00]/5 blur-2xl"></div>
