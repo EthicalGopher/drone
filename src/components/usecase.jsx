@@ -123,18 +123,18 @@ export default function Usecase() {
 
         {/* Mobile */}
         <div className="sm:block md:hidden p-1 sm:p-2">
-  <div className="grid grid-cols-1 gap-4 sm:gap-5">
+  <div className="grid grid-cols-1 gap-5 px-11 ">
     {useCases.map((feature, index) => (
       <div
         key={index}
-        className="bg-[#DB4C00] text-white p-5  rounded-xl shadow-lg
+        className="bg-[#DB4C00] text-white p-5  rounded-xl depthbox border 
                  flex items-center justify-center 
                  font-semibold text-sm sm:text-base min-h-[110px] sm:min-h-[130px]
                  hover:bg-[#a31d56] transition-all duration-300 ease-out
                  transform hover:scale-[1.02] border-2 border-transparent
                  hover:border-white/20 focus:outline-none focus:ring-2
                  focus:ring-white/50 cursor-pointer box
-                 relative overflow-hidden group" // Added group class and overflow-hidden
+                 relative overflow-hidden group " // Added group class and overflow-hidden
       >
         {/* Animated background layer */}
         <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -151,9 +151,9 @@ export default function Usecase() {
                           text-[0.9em] font-normal opacity-0 
                           group-hover:opacity-100 transition-opacity duration-300
                           overflow-auto flex-1 px-2 text-center
-                          flex items-center justify-center">
+                          flex items-center justify-center ">
             {/* Add bullet points and proper spacing */}
-            <ul className="list-disc list-inside space-y-1 text-left">
+            <ul className="list-disc list-inside space-y-1 text-left secondary_text">
               {feature.points.map((point, pIndex) => (
                 <li key={pIndex} className="leading-tight">
                   {point}
@@ -165,7 +165,7 @@ export default function Usecase() {
 
         {/* Interactive indicator */}
         <div className="absolute bottom-2 right-2 text-xs opacity-50 
-                        group-hover:opacity-100 transition-opacity">
+                        group-hover:opacity-100 transition-opacity ">
           Tap for details
         </div>
       </div>

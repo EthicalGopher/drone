@@ -4,7 +4,7 @@ const features = [
   { text: "Live Surveillance and Monitoring", afterhover: "Mini drone cam detects humans/animals." },
   { text: "Data Logging", afterhover: "Dual backup: SD card + cloud storage." },
   { text: "Live Human and Animal Detection System", afterhover: "Real-time human/animal classification." },
-  { text: "Autonomous Flight with manual contro", afterhover: "Automated or supervisor-controlled flights." },
+  { text: "Autonomous Flight with manual control", afterhover: "Automated or supervisor-controlled flights." },
   { text: "Payload Delivery", afterhover: "Emergency payload drop capability" },
   { text: "Leaf Disease Detection System", afterhover: "Automated plant disease detection." },
 ];

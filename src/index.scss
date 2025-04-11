@@ -1,0 +1,15 @@
+$mainbackground:#001220;
+$primarycolor : white;
+$secondarycolor : #E8E9EC;
+$tertiarycolor:#B8BDC9;
+$secondaryfontsize:15px;
+
+.secondary_text{
+    color:$secondarycolor;
+}
+.tertiary_text{
+    color:$tertiarycolor;
+}
+.mainbackground{
+    background-color: $mainbackground;
+}

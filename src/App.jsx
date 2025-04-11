@@ -3,6 +3,7 @@ import Nav from "./components/nav"
 import Usecase from "./components/usecase"
 import './App.css'
 import Mobilefeature from "./components/mobilefeatures"
+import Pricing from "./components/pricing"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
      <Drone/>
      <Mobilefeature/>
      <Usecase/>
+     <Pricing/>
     </>
   )
 }
