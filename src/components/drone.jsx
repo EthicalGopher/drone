@@ -1,5 +1,6 @@
 import React from "react";
 import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
+import { motion } from "framer-motion";
 import Droneani from "../assets/drone.riv";
 import "../assets/styles/hero.scss";
 const RiveWrapper = () => {
@@ -48,8 +49,14 @@ export default function Drone() {
           className=" flex  justify-between w-full  h-screen md:items-center items-end  absolute "
           style={{ zIndex: "1" }}
         >
-          <div className=" hidden lg:flex  flex-col md:gap-12 px-3">
-            <li className="fancy">
+          <motion.div className=" hidden lg:flex  flex-col md:gap-12 px-3"
+          initial={{x:-200}}
+          whileInView={{x:0}}
+          transition={{duration:0.5}}        
+          
+          >
+            <li className="fancy"
+            >
               <span className="top-key"></span>
               <span className="text beforehover">
                 Live Surveillance and Monitoring
@@ -81,11 +88,16 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-          </div>
+          </motion.div>
 
           <RiveWrapper />
 
-          <div className="hidden lg:flex  flex-col md:gap-12 px-3">
+          <motion.div className="hidden lg:flex  flex-col md:gap-12 px-3"
+           initial={{x:200}}
+           whileInView={{x:0}}
+           transition={{duration:0.5}}  
+          
+          >
             <li className="fancy">
               <span className="top-key"></span>
               <span className="text">
@@ -119,11 +131,12 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-          </div>
+          </motion.div>
         </ul>
 
-        <div
+        <motion.div
           className=" justify-center align-center  absolute "
+        
           id="header"
           style={{
             zIndex: "-2",
@@ -143,7 +156,7 @@ export default function Drone() {
             reduce these costs by simplifying monitoring and aiding in effective
             plantation management.
           </p>
-        </div>
+        </motion.div>
         <div className="absolute bottom-0 left-0" style={{ zIndex: "-5" }}>
           <Scrolldown />
         </div>

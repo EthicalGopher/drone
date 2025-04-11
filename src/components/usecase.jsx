@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "../assets/styles/usecase.scss"; // Styles for section, animation
 import "../assets/styles/hero.scss";    // Styles for .fancy list items
 import "../assets/styles/mobilefeature.scss"; // Styles for .box hover effect
-
+import { motion } from "framer-motion";
+import { Parallax } from "react-scroll-parallax";
 export default function Usecase() {
   // Use Case data structure
   const useCases = [
@@ -88,21 +89,31 @@ export default function Usecase() {
       {/* Container */}
       <div className="container mx-auto max-w-6xl z-10 ">
 
-        {/* Title (visible on all screen sizes) */}
+
+    <Parallax speed={-10}>
+
         <h2 className="mt-8 text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Use Case: AI-Powered Drone Surveillance for Tea Plantations
         </h2>
+    </Parallax>
+
+    
 
         {/* --- Desktop View (using li.fancy) --- */}
+        <Parallax speed={-10}>
+
         <div className="hidden md:grid grid-cols-2 gap-8 md:gap-12"> {/* Changed md:grid-cols-2 to lg:grid */}
           {useCases.map((feature, index) => (
-            <li
-              key={`desktop-${index}`}
-              ref={el => featureRefsDesktop.current[index] = el}
-              // Added unique key prefix
-              // Kept existing classes for desktop view
-              className="fancy feature-card bg-gradient-to-br from-[#DB4C00]/10 to-[#a31d56]/10 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg opacity-0 transform translate-y-8 transition-all duration-500 flex flex-col p-5"
-              style={{ listStyle: 'none' }}
+            <motion.li
+            initial={{scale:0,opacity:0}}
+            whileInView={{scale:1,opacity:1}}
+            transition={{duration:0.5,ease:"easeIn"}}
+            key={`desktop-${index}`}
+            ref={el => featureRefsDesktop.current[index] = el}
+            // Added unique key prefix
+            // Kept existing classes for desktop view
+            className="fancy feature-card bg-gradient-to-br from-[#DB4C00]/10 to-[#a31d56]/10 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg opacity-0 transform translate-y-8 transition-all duration-500 flex flex-col p-5"
+            style={{ listStyle: 'none' }}
             >
               <span className="top-key"></span>
               <span className="text flex-grow">
@@ -115,11 +126,12 @@ export default function Usecase() {
               </span>
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
-            </li>
+            </motion.li>
           ))}
         </div>
 
 
+          </Parallax>
 
         {/* Mobile */}
         <div className="sm:block md:hidden p-1 sm:p-2">
