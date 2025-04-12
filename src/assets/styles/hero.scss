@@ -114,14 +114,13 @@ $secondaryfontsize:15px;
 
 #hero_section{
 .fancy {
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    
+    background: linear-gradient(230deg,white,$tertiarycolor);
 
-    background: white;
-    clip-path: path("M 0 100 L 0 75 A 5 5 0 0 1 470  L 200 200 z");
-    border: 2px solid #fff;
     min-width: 430px;
     border-radius: 0;
     box-sizing: border-box;
-    color: $secondarycolor;
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
@@ -137,83 +136,75 @@ $secondaryfontsize:15px;
     transition: all 0.3s ease-in-out;
     user-select: none;
     font-size: 13px;
-   
+    
+    
+    
     @media (max-width:1280px) {
         min-width: auto;
-
+        
     }
     @media (max-width:1440px) {
         min-width: auto;
-
+        
     }
-   }
+}
 
-   .fancy::before {
+.fancy::before {
     content: " ";
+    
     width: 1.5625rem;
     height: 2px;
     background: red;
     top: 50%;
     left: 1.5em;
+    
     position: absolute;
     transform: translateY(-50%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
-   }
+}
 
-   .fancy .text {
+.fancy .text {
     font-size: 1.125em;
     line-height: 1.33333em;
     padding-left: 2em;
+    padding-right: 2rem;
     display: block;
-    text-align: left;
+    
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
     background: transparent !important;
     color: rgb(7, 6, 6);
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+.rotate-180{
+    rotate: 180deg;
+}
+
+
+.fancy:hover {
+    
+   
+    background: linear-gradient(240deg,$secondarycolor,$tertiarycolor);
+ 
+
    }
 
-   .fancy .top-key {
-    height: 2px;
-    width: 1.5625rem;
-    top: -2px;
-    left: 0.625rem;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
-   }
-
-   .fancy .bottom-key-1 {
-    height: 2px;
-    width: 1.5625rem;
-    right: 1.875rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
-
-   .fancy .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
-    right: 0.625rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
-
-   .fancy:hover {
-    color: white;
-    clip-path: none;
-    background: transparent;
+   .fancy:hover .text{
+    color: black !important;
    }
 
    .fancy:hover::before {
     width: 0.9375rem;
 
-    background: white;
+    background: rgb(10, 10, 10);
    }
 
    .fancy:hover .text {

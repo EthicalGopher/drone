@@ -6,6 +6,8 @@ import Mobilefeature from "./components/mobilefeatures"
 import Pricing from "./components/pricing"
 import Maintainance from "./components/maintainance"
 import { ParallaxProvider } from "react-scroll-parallax"
+import Contact from "./components/contact"
+import Footer from "./components/footer"
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
      <Usecase/>
      <Pricing/>
      <Maintainance/>
+     <Contact/>
+     <Footer/>
     </ParallaxProvider>
     </>
   )

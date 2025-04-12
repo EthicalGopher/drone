@@ -58,7 +58,7 @@ export default function Drone() {
             <li className="fancy"
             >
               <span className="top-key"></span>
-              <span className="text beforehover">
+              <span className="text text-left">
                 Live Surveillance and Monitoring
               </span>
               <span className="text afterhover">
@@ -67,9 +67,9 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy">
+            <li className="fancy ">
               <span className="top-key"></span>
-              <span className="text">Data Logging</span>
+              <span className="text text-left">Data Logging</span>
               <span className="text afterhover">
                 Dual backup: SD card + cloud storage.
               </span>
@@ -77,9 +77,9 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy">
+            <li className="fancy ">
               <span className="top-key"></span>
-              <span className="text">
+              <span className="text text-left">
                 Live Human and Animal Detection System
               </span>
               <span className="text afterhover">
@@ -94,26 +94,29 @@ export default function Drone() {
 
           <motion.div className="hidden lg:flex  flex-col md:gap-12 px-3"
            initial={{x:200}}
-           whileInView={{x:0}}
+           whileInView={{x:0}} 
            transition={{duration:0.5}}  
           
           >
-            <li className="fancy">
-              <span className="top-key"></span>
-              <span className="text">
+            
+            <li className=" rotate-180 fancy">
+              
+              <span className="top-key "></span>
+              <span className="text rotate-180 text-right">
                 Autonomous Flight with manual control
               </span>
-              <span className="text afterhover">
+              <span className="text afterhover rotate-180  text-right">
                 Automated or supervisor-controlled flights.
               </span>{" "}
+              
               <span className="bottom-key-1"></span>
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy">
+            <li className="fancy rotate-180 ">
               <span className="top-key"></span>
-              <span className="text">Payload Delivery</span>
-              <span className="text afterhover">
+              <span className="text rotate-180 text-right">Payload Delivery</span>
+              <span className="text afterhover rotate-180 text-right">
                 Emergency payload drop capability.
               </span>{" "}
               <span className="bottom-key-1"></span>
@@ -121,10 +124,10 @@ export default function Drone() {
               <span className="bottom-key-2"></span>
             </li>
            
-            <li className="fancy">
+            <li className="fancy rotate-180 ">
               <span className="top-key"></span>
-              <span className="text">Leaf Disease Detection System</span>
-              <span className="text afterhover">
+              <span className="text rotate-180 text-right">Leaf Disease Detection System</span>
+              <span className="text afterhover rotate-180 text-right">
                 Automated plant disease detection.
               </span>{" "}
               <span className="bottom-key-1"></span>

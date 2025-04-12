@@ -109,7 +109,7 @@ export default function Usecase() {
         <div className="hidden md:grid grid-cols-2 gap-8 md:gap-12">
           {useCases.map((feature, index) => (
             <motion.li
-              initial={{scale:0,opacity:0}}
+              initial={{scale:0.5,opacity:0}}
               whileInView={{scale:1,opacity:1}}
               transition={{duration:0.7,ease:"easeOut"}}
               key={`desktop-${index}`}
