@@ -55,10 +55,10 @@ export default function Drone() {
           transition={{duration:0.5}}        
           
           >
-            <li className="fancy"
+            <li className="fancy 2xl:w-[520px] 2xl:h-[70px] 2xl:w-[520px] 2xl:h-[70px]"
             >
               <span className="top-key"></span>
-              <span className="text text-left">
+              <span className="text text-left " >
                 Live Surveillance and Monitoring
               </span>
               <span className="text afterhover">
@@ -67,7 +67,7 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy ">
+            <li className="fancy 2xl:w-[520px] 2xl:h-[70px] ">
               <span className="top-key"></span>
               <span className="text text-left">Data Logging</span>
               <span className="text afterhover">
@@ -77,7 +77,7 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy ">
+            <li className="fancy 2xl:w-[520px] 2xl:h-[70px] ">
               <span className="top-key"></span>
               <span className="text text-left">
                 Live Human and Animal Detection System
@@ -99,7 +99,7 @@ export default function Drone() {
           
           >
             
-            <li className=" rotate-180 fancy">
+            <li className=" rotate-180 fancy 2xl:w-[520px] 2xl:h-[70px] ">
               
               <span className="top-key "></span>
               <span className="text rotate-180 text-right">
@@ -113,7 +113,7 @@ export default function Drone() {
               <span className="bottom-key-1"></span>
               <span className="bottom-key-2"></span>
             </li>
-            <li className="fancy rotate-180 ">
+            <li className="fancy 2xl:w-[520px] 2xl:h-[70px] rotate-180 ">
               <span className="top-key"></span>
               <span className="text rotate-180 text-right">Payload Delivery</span>
               <span className="text afterhover rotate-180 text-right">
@@ -124,7 +124,7 @@ export default function Drone() {
               <span className="bottom-key-2"></span>
             </li>
            
-            <li className="fancy rotate-180 ">
+            <li className="fancy 2xl:w-[520px] 2xl:h-[70px] rotate-180 ">
               <span className="top-key"></span>
               <span className="text rotate-180 text-right">Leaf Disease Detection System</span>
               <span className="text afterhover rotate-180 text-right">
@@ -167,6 +167,7 @@ export default function Drone() {
           className="background-divider divider1 absolute "
           style={{ zIndex: "-5", bottom: "0" }}
         ></div>
+
         <span
           className="bg-red-200 w-full h-screen absolute"
           style={{ zIndex: "-999" }}

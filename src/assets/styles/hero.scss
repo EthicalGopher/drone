@@ -114,12 +114,13 @@ $secondaryfontsize:15px;
 
 #hero_section{
 .fancy {
-    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    // clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    border-radius: 11px;
     
     background: linear-gradient(230deg,white,$tertiarycolor);
 
     min-width: 430px;
-    border-radius: 0;
+
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
@@ -130,23 +131,16 @@ $secondaryfontsize:15px;
     overflow: visible;
     padding: 1.25em 2em;
     position: relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     text-decoration: none;
     text-transform: none;
     transition: all 0.3s ease-in-out;
     user-select: none;
     font-size: 13px;
-    
-    
-    
-    @media (max-width:1280px) {
-        min-width: auto;
-        
-    }
-    @media (max-width:1440px) {
-        min-width: auto;
-        
-    }
+    min-width: auto;
+ 
 }
 
 .fancy::before {
@@ -191,20 +185,23 @@ $secondaryfontsize:15px;
 
 .fancy:hover {
     
+   border:2px solid white;
+background: $mainbackground !important;
+
+
+
+
+}
+
+.fancy:hover .text{
+       color: white !important;
    
-    background: linear-gradient(240deg,$secondarycolor,$tertiarycolor);
- 
-
-   }
-
-   .fancy:hover .text{
-    color: black !important;
    }
 
    .fancy:hover::before {
     width: 0.9375rem;
 
-    background: rgb(10, 10, 10);
+    background: $tertiarycolor;
    }
 
    .fancy:hover .text {

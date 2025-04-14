@@ -99,10 +99,10 @@ export default function Usecase() {
     <section
       id="usecase"
       ref={sectionRef}
-      className="feature-section min-h-screen bg-[#001220] py-16 px-4 opacity-0 transition-opacity duration-700 relative"
+      className="feature-section min-h-screen bg-[#001220] py-16 px-4  transition-opacity duration-700 relative flex  items-center justify-center"
     >
       <div className="background-divider divider2 w-full absolute top-0 "></div>
-      <div className="container mx-auto max-w-6xl z-10 ">
+      <div className="container mx-auto max-w-6xl z-10 mt-10 flex flex-col justify-center items-center  p-16">
         <h2 className="mt-8 text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Use Case: AI-Powered Drone Surveillance for Tea Plantations
         </h2>
