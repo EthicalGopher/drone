@@ -128,7 +128,7 @@ $secondaryfontsize:15px;
     
     .fancy {
         
-        background: white;
+        background: linear-gradient(230deg, rgba(255, 249, 255, 0.09), rgba(255, 249, 255, 0.13));
         
         border: 2px solid #fff;
         min-width: 430px;
@@ -184,7 +184,7 @@ $secondaryfontsize:15px;
         text-transform: uppercase;
         text-decoration: none;
         background: transparent !important;
-        color: rgb(7, 6, 6);
+        color: rgb(255, 254, 254);
     }
     
     .fancy .top-key {

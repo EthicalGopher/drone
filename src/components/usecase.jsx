@@ -111,7 +111,7 @@ export default function Usecase() {
             <motion.li
               initial={{scale:0.5,opacity:0}}
               whileInView={{scale:1,opacity:1}}
-              transition={{duration:0.7,ease:"easeOut"}}
+              transition={{duration:0.1,ease:"easeOut"}}
               key={`desktop-${index}`}
               ref={el => featureRefsDesktop.current[index] = el}
               className="fancy feature-card bg-gradient-to-br from-[#DB4C00]/10 to-[#a31d56]/10 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg opacity-0 transform translate-y-8 transition-all duration-500 flex flex-col p-5"
