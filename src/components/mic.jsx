@@ -1,5 +1,5 @@
 import  React,{ useState, useCallback, useRef, useEffect } from 'react';
-import { Image, Mic,MessageCircle,Cog} from 'lucide-react';
+import { Image, Mic,MessageCircle,Cog,SendHorizontal} from 'lucide-react';
 import "../assets/styles/mic.scss";
 import axios from 'axios';
 import { browserName, CustomView } from 'react-device-detect';
@@ -23,7 +23,7 @@ const ResponseBox = ({imagetext}) => {
     return (
         <div className="p-3 h-64 overflow-y-scroll hidesrollbar" >
             <div className="wrapper">
-                <div className="overflow-x-hidden  " id="dynamicimagechat">
+                <div className="overflow-x-hidden overflow-y-scroll " id="dynamicimagechat">
                     <div  dangerouslySetInnerHTML={{ __html: responseText }} />
 
                     {currentIndex < imagetext.length && <span className="border-r-2 border-black animate-blink">&nbsp;</span>}
@@ -85,7 +85,7 @@ const VoiceInput = () => {
 
         const handlechat = async() => {
             try {
-                const res = await axios.get(`http://localhost:3000/api/v1/query?query=${encodeURIComponent(chat)}`);
+                const res = await axios.get(`https://drone-backend-thf8.onrender.com/api/v1/query?query=${encodeURIComponent(chat)}`);
                 setChattext(res.data);
 
                 // Add the AI response to chat history immediately after receiving it
@@ -172,7 +172,7 @@ const VoiceInput = () => {
             const formData = new FormData();
             formData.append('image', file);
 
-            const response = await axios.post('http://localhost:3000/api/v1/upload', formData, {
+            const response = await axios.post('https://drone-backend-thf8.onrender.com/api/v1/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -192,7 +192,7 @@ const VoiceInput = () => {
             if (!isTranscribed || !transcript) return;
             setIsLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/api/v1/query?query=${encodeURIComponent(transcript)}`);
+                const response = await axios.get(`https://drone-backend-thf8.onrender.com/api/v1/query?query=${encodeURIComponent(transcript)}`);
                 const responseText = response.data;
                 setText(responseText);
 
@@ -265,7 +265,7 @@ const VoiceInput = () => {
 
             <CustomView condition={browserName === "Chrome" || browserName === "Edge" || browserName === "Safari"}  >
 
-                <div  >
+                <div >
 
                     <div className="max-w-[420px] mx-auto flex flex-col gap-11 ">
                         <div >
@@ -280,7 +280,7 @@ const VoiceInput = () => {
                         </div>
                         <div>
 
-                            <div className="button-mastery">
+                            <div className="button-mastery ">
                                 <div className={`button-container ${isListening ? 'recording' : ''}`}>
                                     {isListening &&
 
@@ -350,7 +350,7 @@ const VoiceInput = () => {
                 </div>
             </CustomView>
             <CustomView condition={browserName !== "Chrome" && browserName !== "Edge" && browserName !== "Safari"}>
-                <div className="fixed bottom-0 left-0 right-0 p-4">
+                <div className="fixed bottom-0 left-0 right-0 p-4 ">
                     <div className="max-w-[420px] mx-auto flex flex-col gap-11 ">
                         <div>
                             {imageResponse !== "" && selectedImage && (
@@ -373,7 +373,7 @@ const VoiceInput = () => {
                                         </svg>
                                     </button>
 
-                                    <div className="p-3 h-64  bg-gray-800 rounded-t-lg overflow-y-scroll " >
+                                    <div className="p-3 h-64 bg-[#111]   rounded-t-lg overflow-y-scroll " >
                                         {chatHistory.map((chat, index) => (
                                             <div
                                                 key={index}
@@ -397,7 +397,7 @@ const VoiceInput = () => {
                                         )}
                                     </div>
 
-                                    <div className="flex items-center p-3 bg-gray-800 rounded-b-lg">
+                                    <div className="flex items-center p-3 bg-[#222] rounded-b-lg">
                                         <input
                                             type="text"
                                             className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-l-full focus:outline-none"
@@ -410,9 +410,7 @@ const VoiceInput = () => {
                                             onClick={handleSendMessage}
                                             disabled={isLoading || chatMessage.trim() === ''}
                                         >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                                            </svg>
+                                            <SendHorizontal />
                                         </button>
                                     </div>
                                 </div>
@@ -451,7 +449,7 @@ const VoiceInput = () => {
                                                 {imageUploading?(<Cog className="mic-icon rotation-animation" size={32} />):(
 
                                                 showChat?
-                                                    (<Cog className="mic-icon " size={32} />):(<MessageCircle className="mic-icon" size={32} />))}
+                                                    (<Cog className="mic-icon rotation-animation" size={32} />):(<MessageCircle className="mic-icon" size={32} />))}
 
                                             </div>
                                         </label>

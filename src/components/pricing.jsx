@@ -22,7 +22,7 @@ const plans = [
       "Audio Warning System",
       "Unlimited Cloud Storage",
     ],
-    pricingModel: "Rs 99",
+    pricingModel: "Rs 1999",
     ctaText: "Start Free Trial",
     description: "Adds automation, AI detection, and unlimited storage."
   },

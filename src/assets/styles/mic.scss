@@ -9,9 +9,14 @@ $secondaryfontsize:15px;
 
 .button-mastery {
   position: relative;
-  width: 420px;
+  //max-width: 450px;
+
+
   user-select: none !important;
   transition: 5s ease;
+  @media (max-width: 460px) {
+    scale:0.7;
+  }
 }
 .button-container {
   padding: 10px;
@@ -21,6 +26,7 @@ $secondaryfontsize:15px;
   position: relative;
   z-index: 100;
   transition: 0.2s ease;
+
 }
 .button-container-depth {
   position: absolute;
@@ -224,7 +230,13 @@ $secondaryfontsize:15px;
 
 .rec-checkbox:not(:checked) + .right-button p::before {
   content: "OFF";
+  display: flex;
+  align-items: center;
+
   transition: 0.3s ease;
+  @media (max-width: 430px) {
+    font-size: 18px !important;
+  }
 }
 .button-container:has(.play-checkbox:checked) .audio-visualizer {
   top: -30px;
