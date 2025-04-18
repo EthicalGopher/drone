@@ -138,8 +138,9 @@ $secondaryfontsize:15px;
     transition: all 0.3s ease-in-out;
     user-select: none;
     font-size: 13px;
-    min-width: auto;
- 
+    min-width: 100%;
+  max-width: 430px;
+
 }
 
 .fancy::before {
