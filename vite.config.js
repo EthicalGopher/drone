@@ -4,4 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
   assetsInclude: ['**/*.riv'], // Add this line
+  optimizeDeps: {
+    exclude: ['lucide-react'],
+  },
+
 });

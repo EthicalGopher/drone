@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$mainbackground:#001220;
+$primarycolor : white;
+$secondarycolor : #E8E9EC;
+$tertiarycolor:#B8BDC9;
+$secondaryfontsize:15px;
+
+.button-mastery {
+  position: relative;
+  width: 420px;
+  user-select: none !important;
+  transition: 5s ease;
+}
+.button-container {
+  padding: 10px;
+  background-color: #26272a;
+  border-radius: 100px;
+  box-shadow: inset 1px -1px 3px 1px #55555533;
+  position: relative;
+  z-index: 100;
+  transition: 0.2s ease;
+}
+.button-container-depth {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background-color: #141519;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 65px;
+  border-bottom-right-radius: 65px;
+  border-bottom: 2px solid #26272a;
+  transition: 0.3s ease;
+  box-shadow:
+          inset 0px -5px 2px #26272a44,
+          20px 30px 60px 15px #000000aa;
+  top: 45px;
+  left: 0;
+  z-index: -1;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: black;
+  border-radius: 100px;
+}
+
+.the-button {
+  flex: 1;
+  width: 200px;
+
+  font-weight: 800;
+  color: #585b6d;
+  background: #131517;
+  font-size: 24px;
+  height: 80px;
+  border: 2px solid #181a1b;
+  outline: 6px solid black;
+  cursor: pointer;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170px;
+  transform: translate(-50%, -50%);
+  background-color: #050709;
+  color: #00c4fa;
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-shadow:
+          0px 0px 5px #66a3ff,
+          0px 0px 10px #66a3ff,
+          0px 0px 20px #66a3ff,
+          0px 0px 40px #66a3ff,
+          0px 0px 80px #66a3ff,
+          0px 0px 120px #66a3ff,
+          0px 0px 130px #66a3ff,
+          0px 0px 140px #66a3ff,
+          0px 0px 150px #ffffff33;
+  outline: 5px solid black;
+  box-shadow:
+          inset 0px 0px 3px 2px #22222288,
+          6px 0px 5px 3px #222222,
+          -5px 0px 5px 3px #222222;
+  transition: 0.5s ease;
+}
+
+.play-button-border {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.mic-icon {
+  color: #00c4fa;
+  filter: drop-shadow(0px 0px 5px #66a3ff);
+}
+
+
+.button-container:has(.rec-checkbox:checked) .mic-icon {
+  color: #fab700;
+  filter: drop-shadow(0px 0px 10px #ff0000);
+}
+
+.left-button {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  box-shadow: inset 0px -1px 2px 1px #222222;
+}
+.right-button {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  text-align: right;
+  padding-right: 20px;
+  letter-spacing: 3px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  box-shadow: inset -2px -2px 2px #222222;
+  transition: 0.2s ease;
+}
+.rec-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background: #fd7a00;
+  background: linear-gradient(0deg, #fd7a00 20%, rgba(255, 255, 255, 0.8) 100%);
+  box-shadow: 0px 0px 15px 2px #fd7a00;
+  transition: 0.2s ease;
+}
+
+.svg {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(13%) saturate(669%)
+  hue-rotate(194deg) brightness(86%) contrast(82%);
+}
+
+.svg:hover {
+  animation:
+          accelerateThenRotate 1s ease-in forwards;
+
+}
+.rec-checkbox,
+.play-checkbox,
+.left-checkbox {
+  display: none;
+}
+.rotation-animation {
+  animation:
+          accelerateThenRotate 1s ease-in forwards,
+          continuousRotate 0.2s linear 0.2s infinite;
+
+
+}
+.rec-checkbox:checked + label .rec-dot {
+  background: linear-gradient(0deg, #ff0000 20%, rgba(255, 255, 255, 0.8) 100%);
+  box-shadow: 0px 0px 15px 2px #ff0000;
+}
+.button-container:has(.rec-checkbox:checked) {
+  background: #880000;
+  transition: 0.3s ease;
+}
+
+.button-mastery:has(.rec-checkbox:checked) .button-container-depth {
+  box-shadow: 0px 0px 60px 15px #880000 !important;
+  background-color: #ac0000;
+  border-bottom: 2px solid red;
+}
+.button-container:has(.rec-checkbox:checked) .play-button {
+  border-radius: 100px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+.button-container:has(.play-checkbox:checked) .play-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  box-shadow: inset 0px 0px 20px 2px #66a3ff;
+}
+.button-container:has(.play-checkbox:checked) .play-button-border {
+  animation:
+          accelerateThenRotate 0.2s ease-out forwards reverse,
+          continuousRotate 0.2s linear 0.2s infinite reverse;
+}
+.button-container:has(.play-checkbox:checked) .play-button-border p {
+  animation:
+          accelerateThenRotate 0.2s ease-in forwards,
+          continuousRotate 0.2s linear 0.2s infinite;
+}
+
+.rec-checkbox:checked + .right-button p::before {
+  content: "ON";
+  font-weight: bold;
+  color: #ff0000;
+  transition: 0.3s ease;
+}
+
+.button-container:has(.rec-checkbox:checked) .play-button {
+  box-shadow: inset 0px 0px 20px 2px #ff0000 !important;
+}
+
+.rec-checkbox:not(:checked) + .right-button p::before {
+  content: "OFF";
+  transition: 0.3s ease;
+}
+.button-container:has(.play-checkbox:checked) .audio-visualizer {
+  top: -30px;
+  left: 50%;
+  width: 200px;
+  height: 10px;
+  padding: 0px 20px;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.button-container:has(.rec-checkbox:checked) .audio-column {
+  background: linear-gradient(0deg, #fab700 0%, #790000 90%, #8b0000 100%);
+  box-shadow: 0px -10px 30px #8b0000;
+  border-top: none;
+}
+.button-container:has(.rec-checkbox:checked) .audio-visualizer {
+  background: linear-gradient(0deg, #fab700 30%, #790000 100%);
+}
+.button-container:has(.left-checkbox:checked) .audio-column {
+  animation-direction: reverse;
+}
+
+.audio-visualizer {
+  position: absolute;
+  width: 20px;
+  height: 20px !important;
+  top: 50%;
+  left: 50%;
+  transition: 1s ease;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(0deg, #00c4fa 30%, #005e79 100%);
+  border: 5px solid #111111;
+  overflow: hidden;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  z-index: -1;
+}
+.audio-column-wrapper {
+  height: 10px;
+  width: 20px;
+  position: relative;
+}
+.audio-column {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  width: 10px;
+  background: linear-gradient(0deg, #00c4fa 0%, #005e79 90%);
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: 0.2s ease;
+  box-shadow: 0px -10px 30px #005e79;
+}
+.audio-column-1 {
+  animation-name: pulse;
+  animation-delay: 0.36s;
+}
+.audio-column-2 {
+  animation-name: pulse;
+  animation-delay: 0.3s;
+}
+.audio-column-3 {
+  animation-name: pulse;
+  animation-delay: 0.24s;
+}
+.audio-column-4 {
+  animation-name: pulse;
+  animation-delay: 0.18s;
+}
+
+.audio-column-5 {
+  animation-name: pulse;
+  animation-delay: 0.12s;
+}
+
+.audio-column-6 {
+  animation-name: pulse;
+  animation-delay: 0.06s;
+}
+
+@keyframes pulse {
+  0% {
+    height: 150px;
+  }
+  20% {
+    height: 130px;
+  }
+  40% {
+    height: 80px;
+  }
+  60% {
+    height: 50px;
+  }
+  80% {
+    height: 5px;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes accelerateThenRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes continuousRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+.hidesrollbar {
+  scrollbar-width: none;
+}
+
+  #dynamicimagechat {
+    color:$tertiarycolor;
+
+
+  b{
+    color:white;
+  }
+  }
+
+
+
