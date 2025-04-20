@@ -9,6 +9,7 @@ import { ParallaxProvider } from "react-scroll-parallax"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
 import VoiceInput from "./components/mic.jsx";
+import Aiassistent from "./components/aiassistent.jsx";
 
 function App() {
 
@@ -25,10 +26,11 @@ function App() {
      <Contact/>
      <Footer/>
     </ParallaxProvider>
-        <div className="fixed bottom-0 left-0 right-10 p-4 container mx-auto " style={{zIndex:999}}>
+        <Aiassistent/>
+        {/*<div className="fixed bottom-0 left-0 right-10 p-4 container mx-auto " style={{zIndex:999}}>*/}
 
-        <VoiceInput/>
-        </div>
+        {/*<VoiceInput/>*/}
+        {/*</div>*/}
     </>
   )
 }
